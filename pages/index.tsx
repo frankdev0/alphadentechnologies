@@ -2,10 +2,35 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const [toggleMenu, setToggleMenu] = useState(false)
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  const  toggleNav = () => {
+    setToggleMenu(!toggleMenu)
+  }
+
+  useEffect(() => {
+    const changeWidth = () => {
+      setScreenWidth(window.innerWidth)
+    }
+    if (typeof window !== 'undefined') {
+      setScreenWidth(window.innerWidth);
+      window.addEventListener('resize', changeWidth);
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', changeWidth);
+      }
+    };
+  },[])
   return (
     <>
       <Head>
@@ -14,101 +39,287 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
+     <main>
+      <header className={styles.headers}>
+        <div className={styles.logo}>
+          <Link href='/'>
+            <Image src='/logo.png' width={50} height={50} alt='company logo' />
+          </Link>
+        
+        </div>
+          <nav>
+            <ul>
+          <li><Link href='/about' className={styles.link}>Home</Link></li>
+          <li><Link href='/about' className={styles.link}>Services</Link></li>
+          <li><Link href='/about' className={styles.link}>Projects</Link>
+            <ul className={styles.submenu}>
+            <li><Link href='/about' className={styles.sublink}>project one</Link></li>
+            <li><Link href='/about' className={styles.sublink}>Project two</Link></li>
+            <li><Link href='/about' className={styles.sublink}>Project Three</Link></li>
+            <li><Link href='/about' className={styles.sublink}>Project four</Link></li>
+            </ul>
+          </li>
+          <li><Link href='/about' className={styles.link}>About Us</Link></li>
+          <li><Link href='/about' className={styles.link}>Company Profile</Link></li>
+          <li><Link href='/about' className={styles.link}>Contact Us</Link></li>
+          </ul>
+         
+          </nav>
+          
+          
+        
+        {/* <div className='mx-2 my-2'>
+          <button className='btn btn-light'>Get Free Quote</button>
+        </div> */}
+      </header>
+      <div className={styles.mobilenavbody}>
+      <nav >
+        <div className={styles.mobilehamburger}>
+        <button onClick={toggleNav} className={`${styles.hamburger} btn`}>BTN</button>
+        </div>
+          
+          </nav>
+          {(toggleMenu || screenWidth > 900) && 
+          <div className={`${styles.mobilenav} `}>
+          
+            <ul>
+            <li><Link href='/about' className={styles.mobilesubmenu}>Home</Link></li>
+            <li><Link href='/about' className={styles.mobilesubmenu}>About</Link></li>
+            <li><Link href='/about' className={styles.mobilesubmenu}>Services</Link></li>
+            <li><Link href='/about' className={styles.mobilesubmenu}>Comoany Profile</Link></li>
+            <li><Link href='/about' className={styles.mobilesubmenu}>Contact Us</Link></li>
+            <li><Link href='/about' className={styles.mobilesubmenu}>Projects</Link></li>
+            </ul>
+          </div>
+          }
+              </div>
+     </main>
+
+     <div  className={`${styles.heroimg} my-5 mx-auto text-center`}>
+      <div className={styles.herotext}>
+      <h6 className={styles.heroheader}>We Provide Best IT Solution</h6>
+      <p>Alpha Technologies Brings the Power of Data science and artificail Intelligence to Every Business.</p>
+      <div>
+        <button className='btn btn-secondary'>Our Services</button>
+      </div>
+      </div>
+     </div>
+     <div className='d-flex justify-content-center text-center my-5'>
+      <div>
+      <h4>Our Services</h4>
+      <h6>Providing Solutions for Startup and Enterprises</h6>
+      </div>
+      </div>
+      <div className='mx-auto d-flex justify-content-center'>
+      <div className={styles.boxcontainer}>
+        <div className={styles.box}>
+            <div className={styles.globe}>
+            <Image src='/globe.png' alt='globe' width={100} height={100} />
+            </div>
+            <div>
+            <h6 className={styles.boxheader}>Managed IT Services</h6>
+            <p>Alpha Technologies Brings the power of data science and artificial intelligence to every business.</p>
+            </div>
+        </div>
+        <div className={styles.box}>
+            <div className={styles.globe}>
+            <Image src='/bell.png' alt='globe' width={100} height={100} />
+            </div>
+            <div>
+            <h6 className={styles.boxheader}>Backup and Recovery</h6>
+            <p>Alpha Technologies Brings the power of data science and artificial intelligence to every business.</p>
+            </div>
+        </div>
+        <div className={styles.box}>
+            <div className={styles.globe}>
+            <Image src='/lock.png' alt='globe' width={100} height={100} />
+            </div>
+            <div>
+            <h6 className={styles.boxheader}>Cyber Security</h6>
+            <p>Alpha Technologies Brings the power of data science and artificial intelligence to every business.</p>
+            </div>
+        </div>
+     
+     </div>
+     </div>
+     <div>
+      <div className='d-flex justify-content-center text-center my-5'>
+        <div>        
+        <h3>Services We Offer</h3>
+        <p>We offer a wide range of services that best suites our customers Base at Alphaden Technologies</p>
+        </div>
+      </div>
+      </div>
+      <div className={styles.servicescontainer}>
+        <div className={styles.servicebox}>
           <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+          <Image src='/support.jpg' alt='globe' width={400} height={250} />
+          <div>
+            <h6>Chat Support</h6>
+          </div>
+          </div>
+          <div>
+            <p>Let your users get in touch with delivery executive for any kind of queries related to their pickup and delivery orders</p>
           </div>
         </div>
+        <div className={styles.servicebox}>
+          <div>
+          <Image src='/sos.jpg' alt='globe' width={400} height={250} />
+          <div>
+            <h6>SOS Feature</h6>
+          </div>
+          </div>
+          <div>
+            <p>Let your users get in touch with delivery executive for any kind of queries related to their pickup and delivery orders</p>
+          </div>
+        </div>
+       
+        <div className={styles.servicebox}>
+          <div>
+          <Image src='/pickup.jpg' alt='globe' width={400} height={250} />
+          <div>
+            <h6>Pickup Flow</h6>
+          </div>
+          </div>
+          <div>
+            <p>Let your users get in touch with delivery executive for any kind of queries related to their pickup and delivery orders</p>
+          </div>
+        </div>
+        <div className={styles.servicebox}>
+          <div>
+          <Image src='/tracking.jpg' alt='globe' width={400} height={250} />
+          <div>
+            <h6>Status Update</h6>
+          </div>
+          </div>
+          <div>
+            <p>Let your users get in touch with delivery executive for any kind of queries related to their pickup and delivery orders</p>
+          </div>
+        </div>
+        <div className={styles.servicebox}>
+          <div>
+          <Image src='/promo.jpg' alt='globe' width={400} height={250} />
+          <div>
+            <h6>Promotions</h6>
+          </div>
+          </div>
+          <div>
+            <p>Let your users get in touch with delivery executive for any kind of queries related to their pickup and delivery orders</p>
+          </div>
+        </div>
+        <div className={styles.servicebox}>
+          <div>
+          <Image src='/refer.jpg' alt='globe' width={400} height={250} />
+          <div>
+            <h6>Refer a Friend</h6>
+          </div>
+          </div>
+          <div>
+            <p>Let your users get in touch with delivery executive for any kind of queries related to their pickup and delivery orders</p>
+          </div>
+        </div>
+      </div>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
+      <div className={`row ${styles.bgstretch}`}>
+        <div className={`col-8 d-flex justify-content-center align-items-center text-center ${styles.innerbg}`}>
+          <div>
+          <h3>Who we are</h3>
+          <p>Alphaden Technologies is a platform that would address the problem of unequal access to fashion brands for Africans by providing a more efficient and equitable distribution channel that enables Africans to discover and purchase items from both African and International fashion brands, creating a win-win situation for all stakeholders involved. To lead the next generation of fashion commerce and engineer the future of fashion, focusing on Africa's contribution to the fashion industry globally.Pashione envisions to be the world's best destination to discover African Fashion brands.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className={`row ${styles.contactus}`}>
+        <div className='d-flex justify-content-center my-5'>
+          <div>
+          <p>Have an Enquiry?</p>
+          <h3>Contact Us</h3>
+          </div>
+         
+        </div>
+        <div className={`col-12 col-lg-6 d-flex justify-content-center align-items-center ${styles.rightaddress}`}>
+          <div>
+          <div>
+            <p>Address:</p>
+            <h5>184 Main Collins Street, Toronto</h5>
+          </div>
+          <div>
+            <p>Phone:</p>
+            <h5>(226) 446 9371</h5>
+          </div>
+          <div>
+            <p>Email:</p>
+            <h5>confer@gmail.com</h5>
+          </div>
+          <div>
+            <p>Website:</p>
+            <h5>www.alphadentechnologies.com</h5>
+          </div>
+          </div>
+        </div>
+        <div className={`col-12 col-lg-6  px-5`}>
+          <form className={styles.contactform}>
+            <div className='d-flex justify-content-between'>
+            <input className='form-control mx-2 my-3' name='firstName' placeholder='First Name'/>
+            <input className='form-control mx-2 my-3' name='lastName' placeholder='Last Name'/>
+            </div>
+            <div className='d-flex justify-content-between'>
+            <input className='form-control mx-2 my-3' name='email' placeholder='Email Address'/>
+            <input className='form-control mx-2 my-3' name='phoneNumber' placeholder='Phone Number'/>
+            </div>
+            <div>
+              <textarea className='form-control mx-2' name='message' placeholder='Your Message'/>
+            </div>
+            <div className='mx-2 my-3'>
+              <button className='btn btn-secondary'>Send Message</button>
+            </div>
+          </form>
         </div>
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
+      </div>
+    
+     {/* FOOTER */}
+     <div className={styles.footerbg}>
+      <div className={styles.footeritems}>
+        <div className={styles.footercolumns}>
+        <div className={styles.logo}>
+          <Link href='/'>
+            <Image src='/logo.png' width={50} height={50} alt='company logo' />
+          </Link>
+        
         </div>
-      </main>
+        <p>09033996669</p>
+        <p>info@alphadentechnologies.com</p>
+        </div>
+        <div className={styles.footercolumns}>
+          <h6>Navigation</h6>
+          <Link href='/about' className={styles.footerlinks} >Home</Link>
+          <Link href='/about' className={styles.footerlinks} >Services</Link>
+          <Link href='/about' className={styles.footerlinks} >Projects</Link>
+          <Link href='/about' className={styles.footerlinks} >About Us</Link>
+          <Link href='/about' className={styles.footerlinks} >Company Profile</Link>
+          <Link href='/about' className={styles.footerlinks} >Contact Us</Link>
+        </div>
+        <div className={styles.footercolumns}>
+          <h6>Services</h6>
+          <Link href='/about' className={styles.footerlinks} >Real Estate</Link>
+          <Link href='/about' className={styles.footerlinks} >Drone Mapping</Link>
+          <Link href='/about' className={styles.footerlinks} >Commercial</Link>
+          <Link href='/about' className={styles.footerlinks} >Construction</Link>
+        </div>
+        <div className={styles.footercolumns}>
+         <p className={styles.footertexts}>Do you need information about our products and services?</p> 
+         <p>Contact Us on</p>
+         <input className='form-control' placeholder='send an email'/>
+       
+        </div>
+        
+      </div>
+      <div className={styles.borderline}></div>
+      <div className={styles.copyright}>
+       <p>© 2023 Alphaden Technologies Limited. All right reserved</p> 
+        </div>
+     </div>
     </>
   )
 }
