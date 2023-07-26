@@ -4,6 +4,8 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import Footer from './components/footer'
+import Navbar from './components/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -39,63 +41,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-     <main>
-      <header className={styles.headers}>
-        <div className={styles.logo}>
-          <Link href='/'>
-            <Image src='/logo.png' width={50} height={50} alt='company logo' />
-          </Link>
-        
-        </div>
-          <nav>
-            <ul>
-          <li><Link href='/about' className={styles.link}>Home</Link></li>
-          <li><Link href='/about' className={styles.link}>Services</Link></li>
-          <li><Link href='/about' className={styles.link}>Projects</Link>
-            <ul className={styles.submenu}>
-            <li><Link href='/about' className={styles.sublink}>project one</Link></li>
-            <li><Link href='/about' className={styles.sublink}>Project two</Link></li>
-            <li><Link href='/about' className={styles.sublink}>Project Three</Link></li>
-            <li><Link href='/about' className={styles.sublink}>Project four</Link></li>
-            </ul>
-          </li>
-          <li><Link href='/about' className={styles.link}>About Us</Link></li>
-          <li><Link href='/about' className={styles.link}>Company Profile</Link></li>
-          <li><Link href='/about' className={styles.link}>Contact Us</Link></li>
-          </ul>
-         
-          </nav>
-          
-          
-        
-        {/* <div className='mx-2 my-2'>
-          <button className='btn btn-light'>Get Free Quote</button>
-        </div> */}
-      </header>
-      <div className={styles.mobilenavbody}>
-      <nav >
-        <div className={styles.mobilehamburger}>
-        <button onClick={toggleNav} className={`${styles.hamburger} btn`}>BTN</button>
-        </div>
-          
-          </nav>
-          {(toggleMenu || screenWidth > 900) && 
-          <div className={`${styles.mobilenav} `}>
-          
-            <ul>
-            <li><Link href='/about' className={styles.mobilesubmenu}>Home</Link></li>
-            <li><Link href='/about' className={styles.mobilesubmenu}>About</Link></li>
-            <li><Link href='/about' className={styles.mobilesubmenu}>Services</Link></li>
-            <li><Link href='/about' className={styles.mobilesubmenu}>Comoany Profile</Link></li>
-            <li><Link href='/about' className={styles.mobilesubmenu}>Contact Us</Link></li>
-            <li><Link href='/about' className={styles.mobilesubmenu}>Projects</Link></li>
-            </ul>
-          </div>
-          }
-              </div>
-     </main>
+     <Navbar/>
 
-     <div  className={`${styles.heroimg} my-5 mx-auto text-center`}>
+     <div  className={`${styles.heroimg} py-5 mx-auto text-center`}>
       <div className={styles.herotext}>
       <h6 className={styles.heroheader}>We Provide Best IT Solution</h6>
       <p>Alpha Technologies Brings the Power of Data science and artificail Intelligence to Every Business.</p>
@@ -279,47 +227,7 @@ export default function Home() {
       </div>
     
      {/* FOOTER */}
-     <div className={styles.footerbg}>
-      <div className={styles.footeritems}>
-        <div className={styles.footercolumns}>
-        <div className={styles.logo}>
-          <Link href='/'>
-            <Image src='/logo.png' width={50} height={50} alt='company logo' />
-          </Link>
-        
-        </div>
-        <p>09033996669</p>
-        <p>info@alphadentechnologies.com</p>
-        </div>
-        <div className={styles.footercolumns}>
-          <h6>Navigation</h6>
-          <Link href='/about' className={styles.footerlinks} >Home</Link>
-          <Link href='/about' className={styles.footerlinks} >Services</Link>
-          <Link href='/about' className={styles.footerlinks} >Projects</Link>
-          <Link href='/about' className={styles.footerlinks} >About Us</Link>
-          <Link href='/about' className={styles.footerlinks} >Company Profile</Link>
-          <Link href='/about' className={styles.footerlinks} >Contact Us</Link>
-        </div>
-        <div className={styles.footercolumns}>
-          <h6>Services</h6>
-          <Link href='/about' className={styles.footerlinks} >Real Estate</Link>
-          <Link href='/about' className={styles.footerlinks} >Drone Mapping</Link>
-          <Link href='/about' className={styles.footerlinks} >Commercial</Link>
-          <Link href='/about' className={styles.footerlinks} >Construction</Link>
-        </div>
-        <div className={styles.footercolumns}>
-         <p className={styles.footertexts}>Do you need information about our products and services?</p> 
-         <p>Contact Us on</p>
-         <input className='form-control' placeholder='send an email'/>
-       
-        </div>
-        
-      </div>
-      <div className={styles.borderline}></div>
-      <div className={styles.copyright}>
-       <p>© 2023 Alphaden Technologies Limited. All right reserved</p> 
-        </div>
-     </div>
+     <Footer/>
     </>
   )
 }

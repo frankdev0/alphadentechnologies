@@ -1,0 +1,82 @@
+.herobg{
+   background-image: url('../public/robot.jpg');
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   padding-top: 4rem;
+   gap: 10px;
+   padding-left: 6rem;
+   background-size: cover;
+   background-position: center;
+   height: 400px;
+   color: #FFFFFF;
+   margin-bottom: 2rem;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 4rem;
+    gap: 10px;
+    padding-left: 6rem;
+    margin-bottom: 2rem;   
+}
+
+.contacts{
+    color: #091835;
+}
+
+.contactborder{
+    width: 60px;
+    height: 8px;
+    background-color: #ff0000;
+    border-radius: 5px;
+}
+
+.scndsection{
+    padding-left: 6rem;
+}
+
+.bar{
+    display: flex;
+    align-items: center;
+    background: #091835;
+    width: 80%;
+    color: #FFFFFF;
+    height: 50px;
+    margin-left: 6rem;
+    padding-left: 0.5rem;
+}
+
+.info{
+    color: #ff0000;
+}
+
+.headertext{
+    font-size: 40px;
+    display: inline-block; 
+}
+
+.textborder{
+    width: 60px;
+    height: 8px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.aboutheader{
+    font-size: 35px;
+}
+
+.aboutsection{
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+    text-align: left;
+}
+
+.sectiontwo{
+    line-height: 30px;
+    text-align: left;
+}
