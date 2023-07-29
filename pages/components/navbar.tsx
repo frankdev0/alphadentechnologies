@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
+import { FaBars } from 'react-icons/fa';
 
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false)
@@ -38,17 +39,22 @@ const Navbar = () => {
           <nav>
             <ul>
           <li><Link href='/' className={styles.link}>Home</Link></li>
-          <li><Link href='/about' className={styles.link}>Services</Link></li>
-          <li><Link href='/about' className={styles.link}>Projects</Link>
+          <li><Link href='/services' className={styles.link}>Services</Link></li>
+          <li><Link href='/projects' className={styles.link}>Projects</Link>
             <ul className={styles.submenu}>
-            <li><Link href='/about' className={styles.sublink}>project one</Link></li>
+            <li><Link href='/projects' className={styles.sublink}>project one</Link></li>
             <li><Link href='/about' className={styles.sublink}>Project two</Link></li>
             <li><Link href='/about' className={styles.sublink}>Project Three</Link></li>
             <li><Link href='/about' className={styles.sublink}>Project four</Link></li>
             </ul>
           </li>
-          <li><Link href='/aboutus' className={styles.link}>About Us</Link></li>
-          <li><Link href='/about' className={styles.link}>Company Profile</Link></li>
+          <li><Link href='/aboutus' className={styles.link}>About</Link>
+          <ul className={styles.submenu}>
+            <li><Link href='/ourteam' className={styles.sublink}>Our Team</Link></li>
+            <li><Link href='/aboutus' className={styles.sublink}>About Us</Link></li>
+            </ul>
+          </li>
+          <li><Link href='/companystatement' className={styles.link}>Company Statement</Link></li>
           <li><Link href='/contactus' className={styles.link}>Contact Us</Link></li>
           </ul>
          
@@ -60,7 +66,7 @@ const Navbar = () => {
       <div className={styles.mobilenavbody}>
       <nav >
         <div className={styles.mobilehamburger}>
-        <button onClick={toggleNav} className={`${styles.hamburger} btn`}>BTN</button>
+        <button onClick={toggleNav} className={`${styles.hamburger} btn`}><FaBars size={25}/></button>
         </div>
           
           </nav>
@@ -71,7 +77,7 @@ const Navbar = () => {
             <li><Link href='/about' className={styles.mobilesubmenu}>Home</Link></li>
             <li><Link href='/about' className={styles.mobilesubmenu}>About</Link></li>
             <li><Link href='/about' className={styles.mobilesubmenu}>Services</Link></li>
-            <li><Link href='/about' className={styles.mobilesubmenu}>Comoany Profile</Link></li>
+            <li><Link href='/about' className={styles.mobilesubmenu}>Company Statement</Link></li>
             <li><Link href='/about' className={styles.mobilesubmenu}>Contact Us</Link></li>
             <li><Link href='/about' className={styles.mobilesubmenu}>Projects</Link></li>
             </ul>

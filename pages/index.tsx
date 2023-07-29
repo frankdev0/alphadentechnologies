@@ -54,7 +54,7 @@ export default function Home() {
      </div>
      <div className='d-flex justify-content-center text-center my-5'>
       <div>
-      <h4>Our Services</h4>
+      <h4>Our Key Services</h4>
       <h6>Providing Solutions for Startup and Enterprises</h6>
       </div>
       </div>
@@ -93,7 +93,7 @@ export default function Home() {
      <div>
       <div className='d-flex justify-content-center text-center my-5'>
         <div>        
-        <h3>Services We Offer</h3>
+        <h3>Other Services We Offer</h3>
         <p>We offer a wide range of services that best suites our customers Base at Alphaden Technologies</p>
         </div>
       </div>
@@ -174,6 +174,19 @@ export default function Home() {
           <h3>Who we are</h3>
           <p>Alphaden Technologies is a platform that would address the problem of unequal access to fashion brands for Africans by providing a more efficient and equitable distribution channel that enables Africans to discover and purchase items from both African and International fashion brands, creating a win-win situation for all stakeholders involved. To lead the next generation of fashion commerce and engineer the future of fashion, focusing on Africa's contribution to the fashion industry globally.Pashione envisions to be the world's best destination to discover African Fashion brands.</p>
           </div>
+        </div>
+      </div>
+
+      <div className='d-flex justify-content-center align-items-center mt-5'>
+        <div>
+        <h4 className='text-center mb-3'>Our Partners</h4>
+        <div className='text-center'>
+        <Image src='/shell.png' alt='shell' width={150} height={150} />
+        <Image className='mx-5' src='/total.png' alt='total' width={150} height={150} />
+        <Image src='/addax.png' alt='addax' width={150} height={150} />
+        <Image className='mx-5' src='/agip.png' alt='agip' width={150} height={150} />
+        <Image src='/exon.png' alt='exon' width={150} height={150} />
+        </div>
         </div>
       </div>
 
