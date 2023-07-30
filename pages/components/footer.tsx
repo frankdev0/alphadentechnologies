@@ -15,8 +15,8 @@ const Footer = () => {
           </Link>
         
         </div>
-        <p>09033996669</p>
-        <p>info@alphadentechnologies.com</p>
+        <p className={styles.footerlinks}>09033996669</p>
+        <p className={styles.footerlinks}>info@alphadentechnologies.com</p>
         </div>
         <div className={styles.footercolumns}>
           <h6>Navigation</h6>
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
         <div className={styles.footercolumns}>
          <p className={styles.footertexts}>Do you need information about our products and services?</p> 
-         <p>Contact Us on</p>
+         <p className={styles.footerlinks}>Contact Us on</p>
          <input className='form-control' placeholder='send an email'/>
        
         </div>

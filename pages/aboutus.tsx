@@ -3,6 +3,7 @@ import Navbar from './components/navbar'
 import Footer from './components/footer'
 import styles from '@/styles/About.module.css'
 import Image from 'next/image'
+import {IoIosArrowForward} from 'react-icons/io';
 // import {GrStatusGood} from 'react-icons/gr';
 // import Image from 'next/image'
 
@@ -11,7 +12,7 @@ const Aboutus = () => {
     <div>
         <Navbar/>
         <div className={styles.herobg}>
-            <p>Home + About Us</p>
+            <p>Home <IoIosArrowForward size={10}/> About Us</p>
             <h3 className={styles.headertext}>About Us</h3>
             <div className={styles.textborder}/>
         </div>

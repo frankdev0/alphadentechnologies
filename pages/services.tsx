@@ -4,6 +4,7 @@ import Footer from './components/footer'
 import styles from '@/styles/About.module.css'
 import Image from 'next/image'
 import {VscDebugBreakpointLog} from 'react-icons/vsc';
+import {IoIosArrowForward} from 'react-icons/io';
 
 
 
@@ -13,7 +14,7 @@ const Services = () => {
         <Navbar/>
         <div>
         <div className={styles.servicesbg}>
-            <p>Home + Our Services</p>
+            <p>Home <IoIosArrowForward size={10}/> Our Services</p>
             <h3 className={styles.headertext}>Our Services</h3>
             <div className={styles.textborder}/>
         </div>

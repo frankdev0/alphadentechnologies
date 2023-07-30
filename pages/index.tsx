@@ -2,10 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import Link from 'next/link'
+// import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Footer from './components/footer'
 import Navbar from './components/navbar'
+import { BiSolidEdit} from 'react-icons/bi';
+import { CiUmbrella} from 'react-icons/ci';
+import { SlGraph} from 'react-icons/sl';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -51,6 +55,52 @@ export default function Home() {
         <button className='btn btn-secondary'>Our Services</button>
       </div>
       </div>
+     </div>
+     {/* ABOUT THE COMPANY */}
+
+     <div>
+     <div className='text-center my-5'>
+      <h3 className={styles.welcome}>WELCOME TO ALPHADEN TECHNOLOGIES</h3>
+      <div className='d-flex justify-content-center'>
+        <p className={styles.subtexts}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nobis ex, aliquid nulla quo iusto praesentium possimus. Accusantium, ut, enim doloremque iure nisi itaque magnam fugit in expedita ducimus explicabo.</p>
+      </div>
+     </div>
+     <div className={`${styles.visionx} row`}>
+      <div className={`${styles.visionright} col-12 col-lg-6`}>
+        <div>
+          <h3 className={styles.welcome}>WE TRANSLATE YOUR VISION INTO ACTION</h3>
+          <p className='my-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed dolor tincidunt porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed dolor tincidunt porttitor consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. porttitor consecteturadipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed dolor tincidunt porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div className={styles.csrcontainer}>
+        <div className={styles.csrbox}>
+          <div className='d-flex'>
+            <div><BiSolidEdit size={25}/></div>
+            <h3 className={styles.csr}>Clean</h3>
+          </div>
+          <div className={styles.csrtext}>Lorem ipsum dolor amet, consectetur adipiscing.</div>
+        </div>
+        <div className={styles.csrbox}>
+          <div className='d-flex'>
+            <div><CiUmbrella size={25}/></div>
+            <h3 className={styles.csr}>Simple</h3>
+          </div>
+          <div className={styles.csrtext}>Lorem ipsum dolor amet, consectetur adipiscing.</div>
+        </div>
+        <div className={styles.csrbox}>
+          <div className='d-flex'>
+            <div><SlGraph size={25}/></div>
+            <h3 className={styles.csr}>Reliable</h3>
+          </div>
+          <div className={styles.csrtext}>Lorem ipsum dolor amet, consectetur adipiscing.</div>
+        </div>
+        </div>
+        
+      </div>
+      <div className={`${styles.visionleft} col-12 col-lg-6`}>
+      <Image src='/statement.jpg' alt='office' width={600} height={550} className='px-4' />
+      </div>
+     </div>
      </div>
      <div className='d-flex justify-content-center text-center my-5'>
       <div>
@@ -198,7 +248,7 @@ export default function Home() {
           </div>
          
         </div>
-        <div className={`col-12 col-lg-6 d-flex justify-content-center align-items-center ${styles.rightaddress}`}>
+        <div className={`col-12 col-lg-6 d-flex justify-content-start justify-content-lg-center align-items-start align-items-lg-center ${styles.rightaddress}`}>
           <div>
           <div>
             <p>Address:</p>

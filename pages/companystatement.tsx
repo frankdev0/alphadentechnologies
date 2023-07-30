@@ -3,13 +3,14 @@ import Navbar from './components/navbar'
 import styles from '@/styles/About.module.css'
 import Footer from './components/footer'
 import {IoMdCheckmark} from 'react-icons/io';
+import {IoIosArrowForward} from 'react-icons/io';
 
 const Companystatement = () => {
   return (
     <div>
         <Navbar/>
         <div className={styles.statementbg}>
-            <p>Home + Company Statement</p>
+            <p>Home <IoIosArrowForward size={10}/> Company Statement</p>
             <h3 className={styles.headertext}>Company Statement</h3>
             <div className={styles.textborder}/>
         </div>

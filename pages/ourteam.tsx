@@ -3,6 +3,7 @@ import Navbar from './components/navbar'
 import Footer from './components/footer'
 import styles from '@/styles/About.module.css'
 import Image from 'next/image'
+import {IoIosArrowForward} from 'react-icons/io';
 
 
 const Ourteam = () => {
@@ -10,7 +11,7 @@ const Ourteam = () => {
     <div>
         <Navbar/>
         <div className={styles.projectsbg}>
-            <p>Home + Our Team</p>
+            <p>Home <IoIosArrowForward size={10}/> Our Team</p>
             <h3 className={styles.headertext}>Our Team</h3>
             <div className={styles.textborder}/>
         </div>

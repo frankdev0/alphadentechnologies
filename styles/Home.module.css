@@ -28,17 +28,40 @@
 }
 
 .headers ul li .link{
+  position: relative;
   text-decoration: none;
   color: #42424a;
   font-size: 18px;
   font-weight: 450;
-  padding: 10px 0;
+  padding: 10px 0px;
   display: inline-block;
   transition:all ease 0.3s;
 }
 
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .headers ul li .link:hover{
   color: #910707;
+}
+
+.menu ul li .link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: #910707;
+  border-radius: 10px;
+  transition: width 0.3s ease; /* Transition only the width property */
+}
+
+.menu ul li .link:hover::before {
+  width: 100%; /* When hovering, expand the width to 100% */
 }
 
 .headers ul .submenu{
@@ -176,7 +199,8 @@ z-index: 2;
   justify-content: flex-start;
   text-decoration: none;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 300;
 }
 
 .copyright{
@@ -190,12 +214,16 @@ z-index: 2;
 .borderline {
   display: flex;
   justify-content: center;
-  border: 0.1px solid #FFFFFF; /* Set the border width, style, and color */
-  width: 70%; /* Set the line width to 70% */
-  margin: 1% 15%; /* Adjust margin to center the line within the container */
+  border: none; /* Remove the existing border property */
+  border-top: 0.5px solid #FFFFFF;
+  width: 70%; 
+  height: 1px;
+  margin: 1% 15%; 
 }
+
 .footertexts{
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 300;
   color: #FFFFFF;
 }
 
@@ -381,4 +409,78 @@ margin: 5rem auto;
   background-color: #f0f0f0;
   border-radius: 6px;
   padding: 20px;
+}
+
+.welcome{
+  font-size: 29px;
+  font-weight: 700;
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+.subtexts{
+  display: block;
+  font-weight: 500;
+  text-align: center;
+  max-width: 800px;
+  color: #555252;
+  padding-top: 20px;
+}
+
+.visionright{
+  padding: 35px 0;
+  padding-left: 4rem;
+}
+
+.csrcontainer{
+  display: flex;
+}
+
+@media screen and (max-width: 900px) {
+  .subtexts{
+    padding: 1rem;
+  }
+  .visionright{
+    padding: 0 2.5rem;
+  }
+  .csrcontainer{
+    display: flex;
+    flex-direction: column;
+  }
+  .rightaddress{
+    padding-left: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.csr{
+  font-size: 25px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+.csrtext{
+  font-size: 14px;
+  color: #555252;
+  font-weight: 500;
+}
+
+.csrbox{
+  width: 200px;
+  height: auto;
+  line-height: 30px;
+  margin-top: 2rem;
+  margin-right: 7px;
+}
+
+.visionleft{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.officeimg{
+  width: 90%;
+  height: 550px;
 }
