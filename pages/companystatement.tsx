@@ -49,12 +49,7 @@ const Companystatement = () => {
                 </div>
                 <div className='mx-5'>Always dealing with our clients and our colleagues in a fair and ethical manner; gaining trust through our actions.</div>
                 </div>
-                {/* <ul className='my-3'>
-                    <li>P-eople First</li>
-                    <li>I-ntegrity</li>
-                    <li>P-nnovation</li>
-                    <li>E-fficiency</li>
-                </ul> */}
+             
             </div>
         </div>
         <Footer/>
