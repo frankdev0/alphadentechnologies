@@ -4,8 +4,6 @@ import Footer from './components/footer'
 import styles from '@/styles/About.module.css'
 import Image from 'next/image'
 import {IoIosArrowForward} from 'react-icons/io';
-// import {GrStatusGood} from 'react-icons/gr';
-// import Image from 'next/image'
 
 const Aboutus = () => {
   return (
