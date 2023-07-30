@@ -117,6 +117,7 @@ z-index: 2;
 
 .mobilenavbody {
   display: block;
+  margin: auto;
 }
 
 
@@ -130,6 +131,7 @@ z-index: 2;
   flex-direction: column;
   height: auto;
   align-items: center;
+  padding-right: 3rem;
   justify-content: center;
   background-color: #091835;
   transition: all ease 0.5s ;
@@ -142,9 +144,15 @@ z-index: 2;
   text-align: center;
 }
 
+.dropdownicon{
+  color: #FFFFFF;
+ 
+}
+
 .mobilenav ul li .mobilesubmenu{
   text-decoration: none;
   color: #FFFFFF;
+  text-align: center;
 
 }
 
@@ -155,16 +163,17 @@ z-index: 2;
 .footeritems {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Creates a grid with 4 equal-width columns */
-  align-items: center;
-  padding: 10px 20px;
+
+  padding: 0 20px;
+  padding-top: 2.5rem;
   height: auto;
   width: 100%;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
   .footeritems {
-    grid-template-columns: repeat(2, 1fr); /* Adjust to two columns on medium screens */
-    padding: 10px 10px;
+    grid-template-columns: repeat(1, 1fr); /* Adjust to two columns on medium screens */
+    padding: 20px 20px;
     gap: 20px;
   }
   .footercolumns:nth-child(2) {
@@ -182,6 +191,11 @@ z-index: 2;
 
 .footercolumns:nth-child(3) {
   margin-right: 20px;
+}
+@media screen and (min-width: 701px) and (max-width: 1200px) {
+  .footeritems {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+  }
 }
 
 .footercolumns{
@@ -248,6 +262,11 @@ z-index: 2;
   text-align: left;
 }
 
+@media screen and (max-width: 900px) {
+  .herotext{
+    padding-left: 1rem;
+  }
+}
 .box{
   display: flex;
   flex-direction: column;
@@ -382,6 +401,19 @@ z-index: 2;
   .servicebox {
     max-width: 400px; 
     margin: 10px auto; 
+    margin: 0 0.5rem;
+  }
+  .serviceparagraphs{
+    padding-left: 0.5rem;
+  }
+  .serviceheaderx{
+    padding-left: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .boxbody{
+    padding: 0 2.5rem;
   }
 }
 
@@ -419,6 +451,13 @@ margin: 5rem auto;
   padding-bottom: 20px;
 }
 
+@media screen and (max-width: 900px) {
+  .welcome{
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
 .subtexts{
   display: block;
   font-weight: 500;
@@ -449,7 +488,9 @@ margin: 5rem auto;
     flex-direction: column;
   }
   .rightaddress{
-    padding-left: 3rem;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 0rem;
     margin-bottom: 3rem;
   }
 }

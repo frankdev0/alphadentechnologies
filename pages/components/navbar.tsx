@@ -7,10 +7,20 @@ import { FaBars } from 'react-icons/fa';
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false)
     const [screenWidth, setScreenWidth] = useState(0);
+    const [showSubMenu, setShowSubMenu] = useState(false);
+    const [showSubMenuTwo, setShowSubMenuTwo] = useState(false);
   
     const  toggleNav = () => {
       setToggleMenu(!toggleMenu)
     }
+
+
+  const toggleSubMenu = () => {
+    setShowSubMenu(!showSubMenu);
+  };
+  const toggleSubMenuTwo = () => {
+    setShowSubMenuTwo(!showSubMenuTwo);
+  };
     useEffect(() => {
         const changeWidth = () => {
           setScreenWidth(window.innerWidth)
@@ -32,7 +42,7 @@ const Navbar = () => {
       <header className={styles.headers}>
         <div className={styles.logo}>
           <Link href='/'>
-            <Image src='/logo.png' width={50} height={50} alt='company logo' />
+            <Image src='/alphatechh.png' width={50} height={50} alt='company logo' />
           </Link>
         
         </div>
@@ -72,27 +82,31 @@ const Navbar = () => {
           </nav>
           {(toggleMenu || screenWidth > 900) && 
           <div className={`${styles.mobilenav} `}>
-          
-            <ul>
+            <div className='d-flex justify-content-center'>
+            <ul className='mx-auto'>
             <li><Link href='/' className={styles.mobilesubmenu}>Home</Link></li>
             <li><Link href='/aboutus' className={styles.mobilesubmenu}>About</Link></li>
-            <li><Link href='/services' className={styles.mobilesubmenu}>Services</Link>
-            {/* <ul className={styles.submenu}>
+            <li className='d-flex justify-content-center'><Link href='/services' className={styles.mobilesubmenu}>Services</Link><div onClick={toggleSubMenuTwo} className={`${styles.dropdownicon}`}></div></li>
+            {(showSubMenuTwo || screenWidth > 900) && (
+            <ul className={styles.submenu}>
             <li><Link href='/ourteam' className={styles.sublink}>Our Team</Link></li>
             <li><Link href='/aboutus' className={styles.sublink}>About Us</Link></li>
-            </ul> */}
-            </li>
+            </ul>
+            )}
+            
             <li><Link href='/companystatement' className={styles.mobilesubmenu}>Company Statement</Link></li>
             <li><Link href='/contactus' className={styles.mobilesubmenu}>Contact Us</Link></li>
-            <li><Link href='/projects' className={styles.mobilesubmenu}>Projects</Link>
-            {/* <ul className={styles.submenu}>
-            <li><Link href='/projects' className={styles.sublink}>project one</Link></li>
-            <li><Link href='/about' className={styles.sublink}>Project two</Link></li>
-            <li><Link href='/about' className={styles.sublink}>Project Three</Link></li>
-            <li><Link href='/about' className={styles.sublink}>Project four</Link></li>
-            </ul> */}
-            </li>
+            <li className='d-flex justify-content-center'><Link href='/projects' className={styles.mobilesubmenu}>Projects</Link><div onClick={toggleSubMenu} className={`${styles.dropdownicon}`}></div> </li>
+            {(showSubMenu || screenWidth > 900) && (
+            <ul className={styles.submenu}>
+            <li><Link href='/projects' className={styles.mobilesubmenu}>project one</Link></li>
+            <li><Link href='/about' className={styles.mobilesubmenu}>Project two</Link></li>
+            <li><Link href='/about' className={styles.mobilesubmenu}>Project Three</Link></li>
+            <li><Link href='/about' className={styles.mobilesubmenu}>Project four</Link></li>
             </ul>
+            )}
+            </ul>
+            </div>
           </div>
           }
               </div>

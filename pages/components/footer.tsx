@@ -11,7 +11,7 @@ const Footer = () => {
         <div className={styles.footercolumns}>
         <div className={styles.logo}>
           <Link href='/'>
-            <Image src='/logo.png' width={50} height={50} alt='company logo' />
+            <Image src='/alphatechh.png' width={50} height={50} alt='company logo' />
           </Link>
         
         </div>
