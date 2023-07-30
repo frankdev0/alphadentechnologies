@@ -74,12 +74,24 @@ const Navbar = () => {
           <div className={`${styles.mobilenav} `}>
           
             <ul>
-            <li><Link href='/about' className={styles.mobilesubmenu}>Home</Link></li>
-            <li><Link href='/about' className={styles.mobilesubmenu}>About</Link></li>
-            <li><Link href='/about' className={styles.mobilesubmenu}>Services</Link></li>
-            <li><Link href='/about' className={styles.mobilesubmenu}>Company Statement</Link></li>
-            <li><Link href='/about' className={styles.mobilesubmenu}>Contact Us</Link></li>
-            <li><Link href='/about' className={styles.mobilesubmenu}>Projects</Link></li>
+            <li><Link href='/' className={styles.mobilesubmenu}>Home</Link></li>
+            <li><Link href='/aboutus' className={styles.mobilesubmenu}>About</Link></li>
+            <li><Link href='/services' className={styles.mobilesubmenu}>Services</Link>
+            {/* <ul className={styles.submenu}>
+            <li><Link href='/ourteam' className={styles.sublink}>Our Team</Link></li>
+            <li><Link href='/aboutus' className={styles.sublink}>About Us</Link></li>
+            </ul> */}
+            </li>
+            <li><Link href='/companystatement' className={styles.mobilesubmenu}>Company Statement</Link></li>
+            <li><Link href='/contactus' className={styles.mobilesubmenu}>Contact Us</Link></li>
+            <li><Link href='/projects' className={styles.mobilesubmenu}>Projects</Link>
+            {/* <ul className={styles.submenu}>
+            <li><Link href='/projects' className={styles.sublink}>project one</Link></li>
+            <li><Link href='/about' className={styles.sublink}>Project two</Link></li>
+            <li><Link href='/about' className={styles.sublink}>Project Three</Link></li>
+            <li><Link href='/about' className={styles.sublink}>Project four</Link></li>
+            </ul> */}
+            </li>
             </ul>
           </div>
           }

@@ -222,7 +222,7 @@ export default function Home() {
         <div className={`col-8 d-flex justify-content-center align-items-center text-center ${styles.innerbg}`}>
           <div>
           <h3>Who we are</h3>
-          <p>Alphaden Technologies is a platform that would address the problem of unequal access to fashion brands for Africans by providing a more efficient and equitable distribution channel that enables Africans to discover and purchase items from both African and International fashion brands, creating a win-win situation for all stakeholders involved. To lead the next generation of fashion commerce and engineer the future of fashion, focusing on Africa's contribution to the fashion industry globally.Pashione envisions to be the world's best destination to discover African Fashion brands.</p>
+          <p>Alphaden Technologies is a platform that would address the problem of unequal access to fashion brands for Africans by providing a more efficient and equitable distribution channel that enables Africans to discover and purchase items from both African and International fashion brands, creating a win-win situation for all stakeholders involved. To lead the next generation of fashion commerce and engineer the future of fashion, focusing on Africa&rsquo;s contribution to the fashion industry globally.Pashione envisions to be the world&rsquo;s best destination to discover African Fashion brands.</p>
           </div>
         </div>
       </div>
