@@ -36,7 +36,7 @@ const Projects = () => {
             <Image src='/smartpipes.jpg' alt='globe' width={700} height={500} />
             </div>
           </div>
-          <div className={styles.projectparagrapghs}>
+          <div className={`${styles.projectparagrapghs} my-5`}>
             <h3 className={styles.projectheaders}>Smart Regulators</h3>
             <p className={styles.projecttexts}>Introducing Smart Regulators, a revolutionary solution that brings unmatched intelligence to gas regulation and distribution. Smart Regulators leverage advanced IoT technologies, enabling precise and automated control of gas pressure at various points in the distribution network. With real-time data insights and remote management capabilities, Smart Regulators optimize gas supply, reduce waste, and enhance system stability. Our cutting-edge regulators ensure that gas is distributed efficiently, responding dynamically to demand fluctuations and maintaining a constant supply to consumers. Embrace Smart Regulators to elevate your gas distribution infrastructure, enhance safety, and deliver a seamless gas supply experience to end-users.</p>
           </div>

@@ -24,7 +24,7 @@ const Services = () => {
             <div className={`${styles.servicewidth} col-12 col-md-6 col-lg-4`}>
             <div className={styles.services}>
                 <div className={styles.servicesimg}>
-                <Image src='/oil.jpg' width={400} height={300} alt='services' className={styles.imagewidth} />
+                <Image src='/oil.jpg' width={400} height={300} alt='services'/>
                 </div>
                 <div className={styles.servicestext}>
                     <h3 className={styles.servicesheaders}>Oil and Gas Industry</h3>

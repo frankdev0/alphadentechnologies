@@ -18,28 +18,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
-  const [toggleMenu, setToggleMenu] = useState(false)
-  const [screenWidth, setScreenWidth] = useState(0);
 
-  const  toggleNav = () => {
-    setToggleMenu(!toggleMenu)
-  }
-
-  useEffect(() => {
-    const changeWidth = () => {
-      setScreenWidth(window.innerWidth)
-    }
-    if (typeof window !== 'undefined') {
-      setScreenWidth(window.innerWidth);
-      window.addEventListener('resize', changeWidth);
-    }
-
-    return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('resize', changeWidth);
-      }
-    };
-  },[])
   return (
     <>
       <Head>
@@ -163,9 +142,9 @@ export default function Home() {
           <div className={`$ col-12 col-md-6 col-lg-4`}>
           <div className={styles.servicebox}>
           <div>
-          <Image src='/oilgass.jpg' alt='globe' width={400} height={250} layout='responsive'/>
+          <Image src='/oilgass.jpg' alt='globe' width={400} height={250}/>
           <div className={styles.serviceheaderx}>
-            <h6 className={`${styles.techheaders} py-2`}>Oil and Gas Industry</h6>
+            <h6 className={`${styles.techheaders} py-2 mt-1`}>Oil and Gas Industry</h6>
           </div>
           </div>
           <div>
@@ -176,9 +155,9 @@ export default function Home() {
           <div className={`$ col-12 col-md-6 col-lg-4`}>
           <div className={styles.servicebox}>
           <div>
-          <Image src='/logistics.jpg' alt='globe' width={400} height={250} />
+          <Image src='/logistics.jpg' alt='globe' width={400} height={250}  />
           <div className={styles.serviceheaderx}>
-            <h6 className={`${styles.techheaders} py-2`}>Logistics Industry </h6>
+            <h6 className={`${styles.techheaders} pt-2`}>Logistics Industry </h6>
           </div>
           </div>
           <div>
@@ -189,9 +168,9 @@ export default function Home() {
           <div className={`$ col-12 col-md-6 col-lg-4`}>
           <div className={styles.servicebox}>
           <div>
-          <Image src='/fintechh.jpg' alt='globe' width={400} height={250} />
+          <Image src='/fintechh.jpg' alt='globe' width={400} height={250}  />
           <div className={styles.serviceheaderx}>
-            <h6 className={`${styles.techheaders} py-2`}>Fintech Services</h6>
+            <h6 className={`${styles.techheaders} p2-2 `}>Fintech Services</h6>
           </div>
           </div>
           <div>
@@ -206,7 +185,7 @@ export default function Home() {
           <div>
           <Image src='/security.jpg' alt='globe' width={400} height={250} />
           <div className={styles.serviceheaderx}>
-            <h6 className={`${styles.techheaders} py-2`}>Surveillance/Security Technologies</h6>
+            <h6 className={`${styles.techheaders} pt-2`}>Surveillance/Security Technologies</h6>
           </div>
           </div>
           <div>
@@ -219,7 +198,7 @@ export default function Home() {
           <div>
           <Image src='/payments.jpg' alt='globe' width={400} height={250} />
           <div className={styles.serviceheaderx}>
-            <h6 className={`${styles.techheaders} py-2`}>Retail Payment Platforms</h6>
+            <h6 className={`${styles.techheaders} pt-2`}>Retail Payment Platforms</h6>
           </div>
           </div>
           <div>
@@ -232,7 +211,7 @@ export default function Home() {
           <div>
           <Image src='/health.jpg' alt='globe' width={400} height={250} />
           <div className={styles.serviceheaderx}>
-            <h6 className={`${styles.techheaders} py-2`}>Health Care Technology</h6>
+            <h6 className={`${styles.techheaders}  pt-2`}>Health Care Technology</h6>
           </div>
           </div>
           <div>
