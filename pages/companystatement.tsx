@@ -47,7 +47,7 @@ const Companystatement = () => {
                     <div className={styles.checker}><IoMdCheckmark size={25} /></div>
                 <div className={styles.corevalues}>Service</div>
                 </div>
-                <div className='mx-5'>We prioritize delivering exceptional service, understanding industry needs' unique needs, and providing tailor-made solutions that exceed expectations</div>
+                <div className='mx-5'>We prioritize delivering exceptional service, understanding industry needs&rsquo; unique needs, and providing tailor-made solutions that exceed expectations</div>
                 </div>
              
             </div>

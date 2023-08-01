@@ -139,7 +139,7 @@ export default function Home() {
             </div>
             <div>
             <h6 className={`${styles.boxheader} mt-2`}>Customized Solutions</h6>
-            <p>We understand that each business has unique requirements. That's why we tailor our solutions to meet your specific needs, ensuring maximum efficiency and effectiveness.</p>
+            <p>We understand that each business has unique requirements. That&rsquo;s why we tailor our solutions to meet your specific needs, ensuring maximum efficiency and effectiveness.</p>
             </div>
         </div>
      
@@ -206,7 +206,7 @@ export default function Home() {
           </div>
           </div>
           <div>
-            <p className={styles.serviceparagraphs}>Safety is paramount, and we take it seriously. With our cutting-edge surveillance and security technologies, we provide robust solutions to law enforcement for threat detection, real-time asset protection, and monitoring. Whether it's safeguarding critical infrastructure or enhancing public safety, Alphaden Technologies sets the standard for technology and data-driven systems.</p>
+            <p className={styles.serviceparagraphs}>Safety is paramount, and we take it seriously. With our cutting-edge surveillance and security technologies, we provide robust solutions to law enforcement for threat detection, real-time asset protection, and monitoring. Whether it&rsquo;s safeguarding critical infrastructure or enhancing public safety, Alphaden Technologies sets the standard for technology and data-driven systems.</p>
           </div>
         </div>
           </div>
@@ -219,7 +219,7 @@ export default function Home() {
           </div>
           </div>
           <div>
-            <p className={styles.serviceparagraphs}>Simplifying the payment experience for businesses and consumers is at the core of what we do. Our retail payment platforms are designed to be fast, secure, and flexible, accommodating various payment methods and seamlessly integrating with existing systems. We empower merchants to offer frictionless checkout experiences while ensuring customers' data remains protected.</p>
+            <p className={styles.serviceparagraphs}>Simplifying the payment experience for businesses and consumers is at the core of what we do. Our retail payment platforms are designed to be fast, secure, and flexible, accommodating various payment methods and seamlessly integrating with existing systems. We empower merchants to offer frictionless checkout experiences while ensuring customers&rsquo; data remains protected.</p>
           </div>
         </div>
           </div>

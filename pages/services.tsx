@@ -69,7 +69,7 @@ const Services = () => {
             </div>
             <div className='d-flex text-left px-lg-4 px-0 mt-2'>
                 <div className='mx-3'><VscDebugBreakpointLog size={25}/></div>
-                <p>We understand that each business has unique requirements. That's why we tailor our solutions to meet your specific needs, ensuring maximum efficiency and effectiveness.</p>
+                <p>We understand that each business has unique requirements. That&rsquo;s why we tailor our solutions to meet your specific needs, ensuring maximum efficiency and effectiveness.</p>
             </div>
             <div className='d-flex text-left px-lg-4 px-0 mt-2'>
                 <div className='mx-3'><VscDebugBreakpointLog size={25}/></div>
@@ -81,7 +81,7 @@ const Services = () => {
             </div>
             <div className='d-flex text-left px-lg-4 px-0 mt-2'>
                 <div className='mx-3'><VscDebugBreakpointLog size={25}/></div>
-                <p>Innovation is not a one-time event at Alphaden Technologies; it's a continuous journey. We invest heavily in research and development to stay ahead of the curve, anticipating industry trends and future challenges</p>
+                <p>Innovation is not a one-time event at Alphaden Technologies; it&rsquo;s a continuous journey. We invest heavily in research and development to stay ahead of the curve, anticipating industry trends and future challenges</p>
             </div>
         </div>
         <div>
