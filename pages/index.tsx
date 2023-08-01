@@ -11,6 +11,7 @@ import { SlGraph} from 'react-icons/sl';
 import { GiTeamIdea} from 'react-icons/gi';
 import { GrTechnology} from 'react-icons/gr';
 import { AiOutlineSolution} from 'react-icons/ai';
+import Link from 'next/link'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -54,9 +55,9 @@ export default function Home() {
       <h6 className={styles.heroheader}>Welcome To Alphaden Technologies -Your Gateway to Disruptive Solutions!</h6>
       <p>A Technology Driven Company Providing World Class Solutions.</p>
       <div>
-        <a href='/services'>
+        <Link href='/services'>
         <button className='btn btn-secondary'>Our Services</button>
-        </a>
+        </Link>
         
       </div>
       </div>
