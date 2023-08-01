@@ -106,8 +106,8 @@ export default function Home() {
      </div>
      <div className='d-flex justify-content-center text-center my-5'>
       <div>
-      <h4>Our Expertise</h4>
-      <h6>Solutions that we provide at Alphaden Technologies</h6>
+      <h4>Why Choose Alphaden Technologies?</h4>
+      <h6>At Alphaden Technologies we pride ourselves with these key Mision Statement</h6>
       </div>
       </div>
       <div className='mx-auto d-flex justify-content-center'>
@@ -148,8 +148,8 @@ export default function Home() {
      <div>
       <div className='d-flex justify-content-center text-center my-5'>
         <div>        
-        <h3>Other Services We Offer</h3>
-        <p>We offer a wide range of services that best suites our customers Base at Alphaden Technologies</p>
+        <h3>Other Expertiise Solutions</h3>
+        <p>We offer a wide range of services in the following industries</p>
         </div>
       </div>
       </div>
@@ -253,7 +253,7 @@ export default function Home() {
 
       <div className='d-flex justify-content-center align-items-center mt-5'>
         <div>
-        <h4 className='text-center mb-3'>Our Partners</h4>
+        <h4 className='text-center mb-3'>Our Clients</h4>
         <div className='text-center'>
         <Image src='/shell.png' alt='shell' width={150} height={150} />
         <Image className='mx-5' src='/total.png' alt='total' width={150} height={150} />
