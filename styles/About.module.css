@@ -182,12 +182,22 @@
 
 @media screen and (max-width: 900px) {
   .servicestext{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 0.5rem;
+    width: 94%;
+    padding-left: 0;
     margin-top: 2rem;
   }
+  .servicestext > div{
+    text-align: left;
+  }
+
+  .servicewidth{
+    padding-left: 0;
+  }
+
+  .imagewidth{
+    width: 90%;
+  }
+
 }
 
 
@@ -343,4 +353,34 @@
   .corevalues{
     font-size: 17px;
     font-weight: 600;
+  }
+
+  .projectparagrapghs{
+    padding-right: 6rem;
+    padding-left: 1rem;
+  }
+
+ 
+
+  .projectheaders{
+    font-size: 29px;
+    font-weight: 700;
+    border-bottom: 2px solid #ddd;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .projectheaders{
+      font-size: 20px;
+    }
+
+    .projectparagrapghs{
+      padding-right: 1rem;
+    }
+  }
+
+  .projecttexts{
+    padding-top: 0.5rem;
+    font-size: 16px;
   }

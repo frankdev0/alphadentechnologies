@@ -20,11 +20,11 @@ const Services = () => {
         </div>
         </div>
         <div className='d-flex justify-content-lg-center justify-content-start my-5'>
-            <div className='row mx-aut mt-5'>
-            <div className={`$ col-12 col-md-6 col-lg-4`}>
+            <div className='row px-2 mt-5'>
+            <div className={`${styles.servicewidth} col-12 col-md-6 col-lg-4`}>
             <div className={styles.services}>
                 <div className={styles.servicesimg}>
-                <Image src='/delivery.jpg' width={400} height={300} alt='services' />
+                <Image src='/oil.jpg' width={400} height={300} alt='services' className={styles.imagewidth} />
                 </div>
                 <div className={styles.servicestext}>
                     <h3 className={styles.servicesheaders}>Oil and Gas Industry</h3>
@@ -35,7 +35,7 @@ const Services = () => {
             <div className={`$ col-12 col-md-6 col-lg-4`}>
             <div className={styles.services}>
                 <div className={styles.servicesimg}>
-                <Image src='/status.jpg' width={400} height={300} alt='services' />
+                <Image src='/refer.jpg' width={400} height={300} alt='services' />
                 </div>
                 <div className={styles.servicestext}>
                     <h3 className={styles.servicesheaders}>Logistics Industry</h3>
@@ -46,7 +46,7 @@ const Services = () => {
             <div className={`$ col-12 col-md-6 col-lg-4`}>
             <div className={styles.services}>
                 <div className={styles.servicesimg}>
-                <Image src='/refer.jpg' width={400} height={300} alt='services' />
+                <Image src='/payment.jpg' width={400} height={300} alt='services' />
                 </div>
                 <div className={styles.servicestext}>
                     <h3 className={styles.servicesheaders}>Fintech Services</h3>
@@ -57,7 +57,7 @@ const Services = () => {
             </div>
         </div>
         
-        <div className='mb-5 mt-5 px-lg-5 px-0'>
+        <div className={`${styles.alignservices} mb-5 mt-5 px-lg-5 px-0`}>
             <p className={`${styles.keyservices}`}>Our Key services include the following</p>
             <div className='d-flex text-left px-lg-4 px-0 mt-5'>
                 <div className='mx-3'><VscDebugBreakpointLog size={25}/></div>

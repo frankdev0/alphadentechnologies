@@ -52,9 +52,12 @@ export default function Home() {
      <div  className={`${styles.heroimg} py-5 mx-auto text-center`}>
       <div className={styles.herotext}>
       <h6 className={styles.heroheader}>Welcome To Alphaden Technologies -Your Gateway to Disruptive Solutions!</h6>
-      <p>Your Gayeway to Disruptive Solutions!</p>
+      <p>A Technology Driven Company Providing World Class Solutions.</p>
       <div>
+        <a href='/services'>
         <button className='btn btn-secondary'>Our Services</button>
+        </a>
+        
       </div>
       </div>
      </div>
@@ -159,7 +162,7 @@ export default function Home() {
           <div className={`$ col-12 col-md-6 col-lg-4`}>
           <div className={styles.servicebox}>
           <div>
-          <Image src='/oilgass.jpg' alt='globe' width={400} height={250} />
+          <Image src='/oilgass.jpg' alt='globe' width={400} height={250} layout='responsive'/>
           <div className={styles.serviceheaderx}>
             <h6 className={`${styles.techheaders} py-2`}>Oil and Gas Industry</h6>
           </div>

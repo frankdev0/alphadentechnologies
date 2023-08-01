@@ -52,10 +52,8 @@ const Navbar = () => {
           <li><Link href='/services' className={styles.link}>Services</Link></li>
           <li><Link href='/projects' className={styles.link}>Projects</Link>
             <ul className={styles.submenu}>
-            <li><Link href='/projects' className={styles.sublink}>project one</Link></li>
-            <li><Link href='/about' className={styles.sublink}>Project two</Link></li>
-            <li><Link href='/about' className={styles.sublink}>Project Three</Link></li>
-            <li><Link href='/about' className={styles.sublink}>Project four</Link></li>
+            <li><Link href='/projects' className={styles.sublink}>Other Projects</Link></li>
+    
             </ul>
           </li>
           <li><Link href='/aboutus' className={styles.link}>About</Link>
@@ -99,10 +97,7 @@ const Navbar = () => {
             <li className='d-flex justify-content-center'><Link href='/projects' className={styles.mobilesubmenu}>Projects</Link><div onClick={toggleSubMenu} className={`${styles.dropdownicon}`}></div> </li>
             {(showSubMenu || screenWidth > 900) && (
             <ul className={styles.submenu}>
-            <li><Link href='/projects' className={styles.mobilesubmenu}>project one</Link></li>
-            <li><Link href='/about' className={styles.mobilesubmenu}>Project two</Link></li>
-            <li><Link href='/about' className={styles.mobilesubmenu}>Project Three</Link></li>
-            <li><Link href='/about' className={styles.mobilesubmenu}>Project four</Link></li>
+            <li><Link href='/projects' className={styles.mobilesubmenu}>Other Projects</Link></li>
             </ul>
             )}
             </ul>
