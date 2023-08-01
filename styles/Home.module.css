@@ -217,6 +217,10 @@ z-index: 2;
   font-weight: 300;
 }
 
+.hyperlinks{
+  font-weight: 600;
+  font-size: 15px;
+}
 .copyright{
   display: flex;
   width: 100%;
@@ -258,14 +262,23 @@ z-index: 2;
 
 .herotext{
   padding-left: 3rem;
-  width: 600px;
+  width: 800px;
   text-align: left;
+}
+
+.techheaders{
+  font-size: 17px;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 900px) {
   .herotext{
     padding-left: 1rem;
   }
+  .heroheader{
+    font-size: 30px;
+  }
+  
 }
 .box{
   display: flex;
@@ -273,7 +286,7 @@ z-index: 2;
   justify-content: space-between;
   align-items: center;
   width: 300px;
-  height: 350px;
+  height: 400px;
   background-color: #0e2d69; 
   box-shadow: 0 20px 45px #00000020;
   padding: 1rem;
@@ -359,7 +372,7 @@ z-index: 2;
   flex-direction: column;
   justify-content: space-between;
   width: 400px;
-  height: 400px;
+  height: 530px;
   background-color: #FFFFFF; 
   box-shadow: 0 20px 45px #00000020;
   padding: 1rem;
@@ -384,6 +397,10 @@ z-index: 2;
   max-width: 1200px;
 }
 
+.serviceparagraphs{
+  font-size: 15px;
+}
+
 @media screen and (max-width: 900px) {
   .servicescontainer{
     grid-template-columns: repeat(2, 1fr); /* Adjust to two columns on medium screens */
@@ -405,6 +422,7 @@ z-index: 2;
   }
   .serviceparagraphs{
     padding-left: 0.5rem;
+    font-size: 14px;
   }
   .serviceheaderx{
     padding-left: 0.5rem;
@@ -498,13 +516,14 @@ margin: 5rem auto;
 .csr{
   font-size: 25px;
   font-weight: 600;
-  padding-left: 10px;
+  padding-left: 15px;
 }
 
 .csrtext{
   font-size: 14px;
   color: #555252;
   font-weight: 500;
+  width: 190px;
 }
 
 .csrbox{

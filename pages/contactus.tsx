@@ -37,7 +37,7 @@ const contactus = () => {
             </div>
             <div className='d-flex my-2'>
                 <div><TfiEmail size={15}/></div>
-                <p className='px-4'>info@alphadenenergy.com</p>
+                <p className='px-4'>info@alphadentechnologies.com</p>
             </div>
             <div className='d-flex'>
                 <div><LuClock3 size={15}/></div>

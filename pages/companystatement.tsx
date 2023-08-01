@@ -18,12 +18,12 @@ const Companystatement = () => {
             <div>
                 <h3 className={styles.mission}>OUR VISION</h3>
                 <div className={styles.missionborder}/>
-                <p className='my-3'>To be the dominant EPCI service provider from Africa, delivering capital projects globally.</p>
+                <p className='my-3'>To be recognized as the global leader in innovation, setting the benchmark for disruptive solutions across industries. We envision a future where Alphaden Technologies remains at the forefront of technology, driving positive change, and empowering businesses worldwide to achieve unparalleled success.</p>
             </div>
             <div className='my-5'>
                 <h3 className={styles.mission}>MISSION STATEMENT</h3>
                 <div className={styles.missionborder}/>
-                <p className='my-3'>To be the dominant EPCI service provider from Africa, delivering capital projects globally.</p>
+                <p className='my-3'>To lead the way in transforming industries through cutting-edge innovation, empowering businesses with disruptive software and hardware solutions that drive progress and elevate global standards.</p>
             </div>
             <div className='mb-5'>
                 <h3 className={styles.mission}>CORE VALUES</h3>
@@ -33,21 +33,21 @@ const Companystatement = () => {
                     <div className={styles.checker}><IoMdCheckmark size={25} /></div>
                 <div className={styles.corevalues}>Integrity</div>
                 </div>
-                <div className='mx-5'>Always dealing with our clients and our colleagues in a fair and ethical manner; gaining trust through our actions.</div>
+                <div className='mx-5'>Upholding the highest ethical standards, we believe in transparency, honesty, and accountability in all our endeavors, fostering trust with our clients, partners, and stakeholders.</div>
                 </div>
                 <div>
                 <div className='d-flex mt-5 align-items-center mb-2'>
                     <div className={styles.checker}><IoMdCheckmark size={25} /></div>
                 <div className={styles.corevalues}>Knowledge</div>
                 </div>
-                <div className='mx-5'>Always dealing with our clients and our colleagues in a fair and ethical manner; gaining trust through our actions.</div>
+                <div className='mx-5'>Embracing a culture of continuous learning and development, we thrive on knowledge sharing and skill enhancement, ensuring our team remains at the forefront of technological advancements.</div>
                 </div>
                 <div>
                 <div className='d-flex mt-5 align-items-center mb-2'>
                     <div className={styles.checker}><IoMdCheckmark size={25} /></div>
                 <div className={styles.corevalues}>Service</div>
                 </div>
-                <div className='mx-5'>Always dealing with our clients and our colleagues in a fair and ethical manner; gaining trust through our actions.</div>
+                <div className='mx-5'>We prioritize delivering exceptional service, understanding industry needs' unique needs, and providing tailor-made solutions that exceed expectations</div>
                 </div>
              
             </div>
